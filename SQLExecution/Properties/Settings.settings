@@ -1,0 +1,13 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="SQLExecution.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="DefaultConnectionStringSSPI" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Server=%ServerAddress%;Database=%DataBase%;Trusted_Connection=True;</Value>
+    </Setting>
+    <Setting Name="DefaultConnectionStringNonSSPI" Type="System.String" Scope="User">
+      <Value Profile="(Default)">
+Server=%ServerAddress%;Database=%DataBase%;User Id=%UserId%;Password=%Password%;</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
