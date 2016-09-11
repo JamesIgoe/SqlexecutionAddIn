@@ -1,4 +1,4 @@
-# SqlexecutionAddIn
+# Sql Execution Add-In
 
 A library that provides simplified threaded and non-threaded execution of SQL statements. It can be used to expose an interface to Microsoft Excel clients, providing threaded, async operations to a single-thread application. You will need to build this on a computer with the MS Office DLL's and/or PIA's. 
 
