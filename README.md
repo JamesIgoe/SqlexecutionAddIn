@@ -15,11 +15,18 @@ SQL Execution Documentation (NuGet Package)
 * 1.1.1: Corrected assembly information
 * 1.1.0: Corrected class hierarchy
 
-
 SQL Execution Tests
 
-* See support the site, http://comparative-advantage.com/code/SQL_ExecutionHelp.php, for full usage syntaz
+* See support the site, http://comparative-advantage.com/code/SQL_ExecutionHelp.php, for full usage syntax
 
+using System;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using SQLExecution;
+using System.Data;
+using System.Data.SqlClient;
+
+namespace SQLExecution.Test
+{
     [TestClass]
     public class SQLExecutionText
     {
@@ -79,6 +86,9 @@ SQL Execution Tests
             Assert.IsNotNull(set);
             Assert.IsTrue(set.Tables[0].Rows.Count > 0);
         }
+    }
+}
+
 
 
 VBA Usage
