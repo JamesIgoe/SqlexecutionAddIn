@@ -2,9 +2,11 @@
 
 A library that provides simplified threaded and non-threaded execution of SQL statements. It can be used to expose an interface to Microsoft Excel clients, providing threaded, async operations to a single-thread application. You will need to build this on a computer with the MS Office DLL's and/or PIA's. 
 
+
 NuGet Package
 
-The NuGet package is avilable here: https://www.nuget.org/packages/SQLExecution/
+* The NuGet package is avilable here: https://www.nuget.org/packages/SQLExecution/
+
 
 SQL Execution Documentation (NuGet Package)
 
@@ -13,12 +15,11 @@ SQL Execution Documentation (NuGet Package)
 * 1.1.1: Corrected assembly information
 * 1.1.0: Corrected class hierarchy
 
+
 SQL Execution Tests
 
 * See support the site, http://comparative-advantage.com/code/SQL_ExecutionHelp.php, for full usage syntaz
 
-namespace SQLExecution.Test
-{
     [TestClass]
     public class SQLExecutionText
     {
@@ -78,7 +79,7 @@ namespace SQLExecution.Test
             Assert.IsNotNull(set);
             Assert.IsTrue(set.Tables[0].Rows.Count > 0);
         }
-    }
+
 
 VBA Usage
 
