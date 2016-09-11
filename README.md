@@ -96,41 +96,41 @@ The classes below both retrieve data and write it out to sheets
 * Some fields in the code below are global parameters as string for server instance, database name and timeout, prefaced by gstr, which can be passed in as variables instead
 * Each item will execute independently, and do not need to be pointing at the same server/database
 
-Private Sub ThreadedExecution()
+    Private Sub ThreadedExecution()
 
-On Error GoTo ErrorTrap
+    On Error GoTo ErrorTrap
    
-    Dim addin As Office.COMAddIn
-    Dim automationObject As Object
-    Set addin = Application.COMAddIns("SQLExecutionAddIn")
-    Set automationObject = addin.Object
+        Dim addin As Office.COMAddIn
+        Dim automationObject As Object
+        Set addin = Application.COMAddIns("SQLExecutionAddIn")
+        Set automationObject = addin.Object
     
-    Dim wkb As Workbook
-    Set wkb = Application.Workbooks.Add()
+        Dim wkb As Workbook
+        Set wkb = Application.Workbooks.Add()
         
-    Call automationObject.AddSPToCollection("SQL/SP 1", wkb.Sheets("target sheet 1"), "target cell", True, gstrSQLServerInstance, gstrSQLServerDatabase, gintDefaultCommandTimeOut)
+        Call automationObject.AddSPToCollection("SQL/SP 1", wkb.Sheets("target sheet 1"), "target cell", True, gstrSQLServerInstance, gstrSQLServerDatabase, gintDefaultCommandTimeOut)
 
-    Call automationObject.AddSPToCollection("SQL/SP 2", wkb.Sheets("target sheet 2"), "target cell", True, gstrSQLServerInstance, gstrSQLServerDatabase, gintDefaultCommandTimeOut)
+        Call automationObject.AddSPToCollection("SQL/SP 2", wkb.Sheets("target sheet 2"), "target cell", True, gstrSQLServerInstance, gstrSQLServerDatabase, gintDefaultCommandTimeOut)
 
-    Call automationObject.AddSPToCollection("SQL/SP 3", wkb.Sheets("target sheet 3"), "target cell", True, gstrSQLServerInstance, gstrSQLServerDatabase, gintDefaultCommandTimeOut)
+        Call automationObject.AddSPToCollection("SQL/SP 3", wkb.Sheets("target sheet 3"), "target cell", True, gstrSQLServerInstance, gstrSQLServerDatabase, gintDefaultCommandTimeOut)
 
-    Call automationObject.ExecuteSPCollection
+        Call automationObject.ExecuteSPCollection
     
-    Call automationObject.ClearSPCollection
-
-ExitSub:
-
-    Set automationObject = Nothing
-    Set addin = Nothing
+        Call automationObject.ClearSPCollection
     
-    Set wkb = Nothing
-    
-    Exit Sub
-    
-ErrorTrap:
+    ExitSub:
 
-    Call StandardMessage(Err.Description, vbOKOnly)
+        Set automationObject = Nothing
+        Set addin = Nothing
     
-    GoTo ExitSub
+        Set wkb = Nothing
+    
+        Exit Sub
+    
+    ErrorTrap:
 
-End Sub
+        Call StandardMessage(Err.Description, vbOKOnly)
+    
+        GoTo ExitSub
+
+    End Sub
