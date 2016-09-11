@@ -15,11 +15,7 @@ SQL Execution Documentation (NuGet Package)
 
 SQL Execution Tests
 
-using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SQLExecution;
-using System.Data;
-using System.Data.SqlClient;
+* See support the site, http://comparative-advantage.com/code/SQL_ExecutionHelp.php, for full usage syntaz
 
 namespace SQLExecution.Test
 {
@@ -84,7 +80,6 @@ namespace SQLExecution.Test
         }
     }
 
-
 VBA Usage
 
 An example using the code to execute SQL asynchronously and write it out to different sheets. In effect, the execution time is nearer to the execution time of the slowest command object, rather than being the sum of execution times. 
@@ -95,5 +90,5 @@ Some Notes:
 The classes below both retrieve data and write it out to sheets
 * Some fields in the code below are global parameters as string for server instance, database name and timeout, prefaced by gstr, which can be passed in as variables instead
 * Each item will execute independently, and do not need to be pointing at the same server/database
-* See support the site, http://comparative-advantage.com/code/SQL_ExecutionHelp.php, for usage syntaz
+* See support the site, http://comparative-advantage.com/code/SQL_ExecutionHelp.php, for usage syntax
 
