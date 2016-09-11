@@ -19,87 +19,14 @@ SQL Execution Tests
 
 * See support the site, http://comparative-advantage.com/code/SQL_ExecutionHelp.php, for full usage syntax
 
-using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SQLExecution;
-using System.Data;
-using System.Data.SqlClient;
-
-namespace SQLExecution.Test
-{
-    [TestClass]
-    public class SQLExecutionText
-    {
-        [TestMethod]
-        public void CreateSqlExecutionClasssTest()
-        {
-            SQLExecution.SqlExecution sqlClass = new SQLExecution.SqlExecution();
-            Assert.IsNotNull(sqlClass);
-        }
-
-        [TestMethod]
-        public void SQLCommandExecutionTest()
-        {
-            SQLExecution.SqlCommandParameters param = new SqlCommandParameters()
-            {
-                CommandTimeOut = 60,
-                DatabaseName = "",
-                SqlServerInstance = "",
-                StoredProcedure = "",
-                UseIntegratedSecurity = false,
-                UserId = "",
-                Password = ""
-            };
-
-            SQLExecution.SqlCommandExecution cmd = new SqlCommandExecution(param);
-
-            cmd.Execute();
-
-            System.Data.DataSet set = cmd.Data;
-
-            Assert.IsNotNull(set);
-            Assert.IsTrue(set.Tables[0].Rows.Count > 0);
-        }
-
-        [TestMethod]
-        public void SQLExecutionTest()
-        {
-            SQLExecution.SqlCommandParameters param = new SqlCommandParameters()
-            {
-                CommandTimeOut = 60,
-                DatabaseName = "",
-                SqlServerInstance = "",
-                StoredProcedure = "",
-                UseIntegratedSecurity = false,
-                UserId = "",
-                Password = ""
-            };
-
-            SQLExecution.SqlExecution exec = new SqlExecution();
-
-            exec.AddToList(param);
-
-            exec.Run();
-
-            System.Data.DataSet set = exec.Commands[0].SqlExecution.Data;
-
-            Assert.IsNotNull(set);
-            Assert.IsTrue(set.Tables[0].Rows.Count > 0);
-        }
-    }
-}
-
-
-
 VBA Usage
 
 An example using the code to execute SQL asynchronously and write it out to different sheets. In effect, the execution time is nearer to the execution time of the slowest command object, rather than being the sum of execution times. 
 
 Some Notes:
 
-* The data classes used above can be used instead of the ones below if you only want to execute SQL and collect data
-The classes below both retrieve data and write it out to sheets
-* Some fields in the code below are global parameters as string for server instance, database name and timeout, prefaced by gstr, which can be passed in as variables instead
+* The data classes used can be used to execute SQL, and either store data, or write to sheets
+* Some fields in the code use global parameters as string for server instance, database name and timeout, prefaced by gstr
 * Each item will execute independently, and do not need to be pointing at the same server/database
 * See support the site, http://comparative-advantage.com/code/SQL_ExecutionHelp.php, for usage syntax
 
