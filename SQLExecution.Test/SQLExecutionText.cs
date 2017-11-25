@@ -22,12 +22,12 @@ namespace SQLExecution.Test
             SQLExecution.SqlCommandParameters param = new SqlCommandParameters()
             {
                 CommandTimeOut = 60,
-                DatabaseName = "SQL2008_600471_codedotnet",
-                SqlServerInstance = "sql2k802.discountasp.net",
-                StoredProcedure = "SELECT [MonthNum],[MonthText] FROM [SQL2008_600471_codedotnet].[dbo].[Z_tblMonth]",
+                DatabaseName = "",
+                SqlServerInstance = "",
+                StoredProcedure = "",
                 UseIntegratedSecurity = false,
-                UserId = "SQL2008_600471_codedotnet_user",
-                Password = "pauline"
+                UserId = "",
+                Password = ""
             };
 
             SQLExecution.SqlCommandExecution cmd = new SqlCommandExecution(param);
@@ -48,12 +48,12 @@ namespace SQLExecution.Test
             SQLExecution.SqlCommandParameters param = new SqlCommandParameters()
             {
                 CommandTimeOut = 60,
-                DatabaseName = "SQL2008_600471_codedotnet",
-                SqlServerInstance = "sql2k802.discountasp.net",
-                StoredProcedure = "SELECT [MonthNum],[MonthText] FROM [SQL2008_600471_codedotnet].[dbo].[Z_tblMonth]",
+                DatabaseName = "",
+                SqlServerInstance = "",
+                StoredProcedure = "",
                 UseIntegratedSecurity = false,
-                UserId = "SQL2008_600471_codedotnet_user",
-                Password = "pauline"
+                UserId = "",
+                Password = ""
             };
 
             using (SQLExecution.SqlExecution exec = new SqlExecution())
@@ -76,23 +76,23 @@ namespace SQLExecution.Test
             SQLExecution.SqlCommandParameters param = new SqlCommandParameters()
             {
                 CommandTimeOut = 60,
-                DatabaseName = "SQL2008_600471_codedotnet",
-                SqlServerInstance = "sql2k802.discountasp.net",
-                StoredProcedure = "SELECT TOP 10 * FROM [SQL2008_600471_codedotnet].[dbo].[Z_tblMonth]",
+                DatabaseName = "",
+                SqlServerInstance = "",
+                StoredProcedure = "",
                 UseIntegratedSecurity = false,
-                UserId = "SQL2008_600471_codedotnet_user",
-                Password = "pauline"
+                UserId = "",
+                Password = ""
             };
 
             SQLExecution.SqlCommandParameters param2 = new SqlCommandParameters()
             {
                 CommandTimeOut = 60,
-                DatabaseName = "SQL2008_600471_codedotnet",
-                SqlServerInstance = "sql2k802.discountasp.net",
-                StoredProcedure = "SELECT TOP 6 * FROM [SQL2008_600471_codedotnet].[dbo].[Z_tblMonth]",
+                DatabaseName = "",
+                SqlServerInstance = "",
+                StoredProcedure = "",
                 UseIntegratedSecurity = false,
-                UserId = "SQL2008_600471_codedotnet_user",
-                Password = "pauline"
+                UserId = "",
+                Password = ""
             };
 
             using (SQLExecution.SqlExecution exec = new SqlExecution())
