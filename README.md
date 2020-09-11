@@ -17,7 +17,7 @@ SQL Execution Documentation (NuGet Package)
 
 SQL Execution Tests
 
-* See the support doc, SQL_ExecutionHelp.md, for usage syntax
+* See [the support doc][https://github.com/JamesIgoe/SqlexecutionAddIn/blob/master/SQL_ExecutionHelp.md], for usage syntax
 
 VBA Usage
 
