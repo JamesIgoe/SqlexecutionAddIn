@@ -17,7 +17,7 @@ SQL Execution Documentation (NuGet Package)
 
 SQL Execution Tests
 
-* See support the site, http://comparative-advantage.com/code/SQL_ExecutionHelp.php, for full usage syntax
+* See the support doc,https://github.com/JamesIgoe/SqlexecutionAddIn/blob/master/SQL_ExecutionHelp.md, for usage syntax
 
 VBA Usage
 
@@ -29,4 +29,3 @@ Some Notes:
 * Some fields in the code use global parameters as string for server instance, database name and timeout, prefaced by gstr
 * Each item will execute independently, and do not need to be pointing at the same server/database
 * See support the site, http://comparative-advantage.com/code/SQL_ExecutionHelp.php, for usage syntax
-
